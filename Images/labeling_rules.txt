@@ -1,0 +1,27 @@
+Smart JSS Image Compliance Detection - Label Rules
+
+Target outputs:
+1. is_female
+2. has_jio_jacket
+3. has_laminated_jio_promotional_paper
+
+Definitions:
+- is_female = Yes if labeled as female in dataset, else No
+- has_jio_jacket = Yes only when the official Jio jacket/vest is clearly visible
+- has_laminated_jio_promotional_paper = Yes only when the correct laminated Jio promotional paper is clearly visible in hand
+- wrong paper = No
+- no paper = No
+- unclear visibility = send for manual review
+
+Expected photo conditions:
+- one person only
+- standardized standing pose
+- clear visibility of torso/jacket area
+- paper visible if present
+- no blur
+- no heavy tilt
+- no group photo
+
+Operational principle:
+- model prediction must include confidence
+- low-confidence or unclear cases should be flagged for manual review

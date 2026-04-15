@@ -1,0 +1,393 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f7fb;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.page {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+.card {
+  width: 100%;
+  max-width: 760px;
+  background: white;
+  border-radius: 16px;
+  padding: 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #1f3c88;
+  text-align: center;
+}
+
+.subtitle {
+  margin: 0 0 24px;
+  color: #555;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+label {
+  font-weight: 600;
+  color: #333;
+}
+
+input[type="text"],
+input[type="file"] {
+  padding: 12px;
+  border: 1px solid #cfd7e6;
+  border-radius: 10px;
+  font-size: 15px;
+}
+
+button {
+  margin-top: 8px;
+  padding: 14px 16px;
+  border: none;
+  border-radius: 10px;
+  background: #2563eb;
+  color: white;
+  font-size: 16px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+button:disabled {
+  background: #93c5fd;
+  cursor: not-allowed;
+}
+
+.preview-box {
+  margin-top: 8px;
+  border: 1px solid #dbe4f0;
+  border-radius: 12px;
+  padding: 12px;
+  background: #fafcff;
+}
+
+.preview-image {
+  width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 10px;
+}
+
+.error {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 10px;
+  background: #fee2e2;
+  color: #b91c1c;
+  font-weight: 600;
+}
+
+.result-box {
+  margin-top: 24px;
+  padding: 20px;
+  border-radius: 14px;
+  background: #f8fbff;
+  border: 1px solid #dbeafe;
+}
+
+.result-box h2 {
+  margin-top: 0;
+  margin-bottom: 16px;
+  color: #1e3a8a;
+  text-align: center;
+}
+
+.result-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 10px 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.result-row:last-child {
+  border-bottom: none;
+}
+
+.result-row span {
+  color: #374151;
+}
+
+.result-row strong {
+  color: #111827;
+  text-align: right;
+}
+
+.review-reason-row {
+  align-items: flex-start;
+}
+
+.review-reason-row strong {
+  white-space: normal;
+  max-width: 55%;
+  line-height: 1.4;
+}
+
+/* Pose guide */
+.pose-guide {
+  margin: 8px 0 28px;
+  padding: 20px;
+  border: 1px solid #dbeafe;
+  background: #f8fbff;
+  border-radius: 16px;
+}
+
+.pose-guide-header h2 {
+  margin: 0 0 6px;
+  color: #1e3a8a;
+  font-size: 22px;
+  text-align: center;
+}
+
+.pose-guide-header p {
+  margin: 0 0 18px;
+  color: #475569;
+  text-align: center;
+}
+
+.pose-guide-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+}
+
+.pose-visual-card,
+.pose-rules-card {
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 16px;
+}
+
+.pose-visual {
+  position: relative;
+  min-height: 360px;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #eef6ff 0%, #f8fbff 100%);
+  overflow: hidden;
+}
+
+.pose-label {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 14px;
+  background: #1d4ed8;
+  color: white;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 8px 12px;
+  border-radius: 999px;
+}
+
+.pose-person {
+  position: absolute;
+  left: 50%;
+  top: 58px;
+  transform: translateX(-50%);
+  width: 180px;
+  height: 270px;
+}
+
+.pose-head {
+  width: 48px;
+  height: 48px;
+  background: #1f2937;
+  border-radius: 50%;
+  margin: 0 auto 10px;
+}
+
+.pose-body {
+  width: 92px;
+  height: 120px;
+  background: #2563eb;
+  border-radius: 18px;
+  margin: 0 auto;
+  position: relative;
+  color: white;
+  font-size: 12px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 8px;
+}
+
+.pose-arm {
+  position: absolute;
+  top: 74px;
+  width: 18px;
+  height: 95px;
+  background: #93c5fd;
+  border-radius: 14px;
+}
+
+.pose-arm-left {
+  left: 26px;
+  transform: rotate(8deg);
+}
+
+.pose-arm-right {
+  right: 26px;
+  transform: rotate(-18deg);
+  height: 105px;
+}
+
+.pose-paper {
+  position: absolute;
+  right: -6px;
+  top: 118px;
+  width: 74px;
+  height: 96px;
+  background: white;
+  border: 3px solid #1d4ed8;
+  border-radius: 10px;
+  box-shadow: 0 6px 16px rgba(37, 99, 235, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #1d4ed8;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px;
+}
+
+.pose-leg {
+  position: absolute;
+  top: 176px;
+  width: 22px;
+  height: 92px;
+  background: #1f2937;
+  border-radius: 14px;
+}
+
+.pose-leg-left {
+  left: 64px;
+}
+
+.pose-leg-right {
+  right: 64px;
+}
+
+.pose-badge {
+  position: absolute;
+  background: white;
+  color: #1e3a8a;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 8px 10px;
+  font-size: 12px;
+  font-weight: 700;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.pose-badge-one {
+  left: 14px;
+  bottom: 18px;
+}
+
+.pose-badge-two {
+  right: 14px;
+  bottom: 18px;
+  max-width: 150px;
+  text-align: center;
+}
+
+.pose-rule-block {
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.pose-rule-block h3 {
+  margin-top: 0;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.pose-rule-block ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.pose-rule-block li {
+  margin-bottom: 8px;
+  color: #334155;
+  line-height: 1.45;
+}
+
+.pose-rule-block.good {
+  background: #effaf3;
+  border: 1px solid #bbf7d0;
+  margin-bottom: 14px;
+}
+
+.pose-rule-block.good h3 {
+  color: #166534;
+}
+
+.pose-rule-block.bad {
+  background: #fff5f5;
+  border: 1px solid #fecaca;
+}
+
+.pose-rule-block.bad h3 {
+  color: #b91c1c;
+}
+
+@media (max-width: 768px) {
+  .page {
+    padding: 20px 12px;
+  }
+
+  .card {
+    padding: 18px;
+  }
+
+  h1 {
+    font-size: 24px;
+  }
+
+  .pose-guide-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pose-visual {
+    min-height: 320px;
+  }
+
+  .result-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .result-row strong {
+    text-align: left;
+  }
+
+  .review-reason-row strong {
+    max-width: 100%;
+  }
+}
