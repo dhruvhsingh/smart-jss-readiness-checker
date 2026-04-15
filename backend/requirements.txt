@@ -3,3 +3,6 @@ uvicorn
 python-multipart
 pillow
 pandas
+python-dotenv
+requests
+google-genai
