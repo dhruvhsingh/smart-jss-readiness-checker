@@ -7,7 +7,7 @@ from google import genai
 from google.genai import types
 
 
-MODEL_NAME = "gemini-3.1-pro-preview"
+MODEL_NAME = "gemini-2.5-flash"
 
 PROMPT = """
 You are a strict Smart JSS readiness checker.
